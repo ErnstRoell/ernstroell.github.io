@@ -1,0 +1,34 @@
+title: "Ernst Roell"
+author: "Ernst Roell"
+description: "Ernst Roell"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
+
+# Layout
+
+show_excerpts: true        # show article excerpts on the home page
+show_frame: false           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+minimal: true             # use a dark header
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {title: "Home", file: "index.md"}
+  - {title: "Research", file: "research.md"}
+  # - {title: "Blog", file: "blog.md"}
+  - {title: "Aidos Lab", url: "https://aidos.group"}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:ernst.roeell@helmholtz-muenchen.de"}
+  - {title: Github, icon: github, url: "https://github.com/ErnstRoell"}
+  - {title: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/in/ernstroell"}
+
+comments:
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+
+plugins:
+ - jekyll-feed

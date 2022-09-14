@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-09-14T12:02:06+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ernst Roell</title><subtitle>Ernst Roell</subtitle><author><name>Ernst Roell</name></author><entry><title type="html">Test</title><link href="http://localhost:4000/test/" rel="alternate" type="text/html" title="Test" /><published>2018-01-01T00:00:00+00:00</published><updated>2018-01-01T00:00:00+00:00</updated><id>http://localhost:4000/test</id><content type="html" xml:base="http://localhost:4000/test/"><![CDATA[<p>&lt;!DOCTYPE html&gt;</p>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="R. J. LeVeque and T. P. Chartier" />
+  <title>A Simple Example Using LaTeX</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	</script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">A Simple Example Using LaTeX</h1>
+<p class="author">R. J. LeVeque and T. P. Chartier</p>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>This paper illustrates how various typesetting is accomplished in LaTeX. You are encouraged to view both the source code (<span>sample.tex</span>) and the typeset paper (<span>sample.dvi</span>).</p>
+<p>First, notice that components of your paper such as <span><em>sections, subsections,</em></span> and <span><em>equations</em></span> are numbered automatically.</p>
+<h2 id="lists">Lists</h2>
+<p>Making an itemized list is easy:</p>
+<ul>
+<li><p>If the LaTeX  file is called <span>sample.tex</span> then output is created by executing<br />
+<span>latex sample</span><br />
+This creates a file <span>sample.dvi</span>. To view or print, see documentation for your system.</p></li>
+<li><p>Note that leaving one or more blank lines in the input gives the start of a new paragraph. Otherwise blanks do not matter. To force a line to end, use double backslash as in the previous item as seen in <span>sample.tex</span>.</p></li>
+<li><p>Anything after a % is a comment that won’t appear in the output.</p></li>
+</ul>
+<h1 id="mathematical-formulas">Mathematical formulas</h1>
+<p>This paper supplies only a taste of how mathematical formulas are created in LaTeX. For more information, see a LaTeX  manual such as <span class="citation" data-cites="go-mi-sa:latex"></span>. As a short introduction, a few pointers are contained in this section.</p>
+<p>Dollar signs places LaTeX  into its math mode, which is where mathematical formulas and equations are created. To include an equation in a current line of text, place one dollar sign ($) before and after the equation, for example we might define <span class="math inline">\(f(x) = 3e^x\)</span>. If an equation should be displayed, place two dollar signs ($$) before and after the equation. For example, we might define: <span class="math display">\[\sum_{j=1}^N j = \frac{N(N+1)}{2}.\]</span> If the equation should be numbered, use the following notation (see the LaTeX  file): <span class="math display">\[e^{i\pi} = \cos(\pi) = -1.
+\label{cosequation}\]</span> This equation was given a label (which is optional). Hence, the equation can be referred to later as (<a href="#cosequation" data-reference-type="ref" data-reference="cosequation">[cosequation]</a>) rather than hardcoding such numbers into the LaTeX  file. Therefore, adding new equations does not facilitate a need for the programmer to manually renumber the equations. (Note that you will have to run LaTeX  twice on your <span>.tex</span> file for numbering to appear properly. The first run stores the labels in the file <span>sample.aux</span> and the second time run reads these labels at the beginning of processing.)</p>
+<h1 id="matrices">Matrices</h1>
+<p>Matrices can be made using an “array”. Here’s a useful definition that makes it easier to define matrices: (see the LaTeX  source file)</p>
+<p>Here’s a simple matrix equation using this definition: <span class="math display">\[\left[\begin{array}{ccccccccccccc} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right]
+\left[\begin{array}{ccccccccccccc} x_1\\ x_2 \end{array}\right]
+= \left[\begin{array}{ccccccccccccc} b_1\\ b_2 \end{array}\right]
+\label{matrixequation}\]</span></p>
+<h1 id="figures">Figures</h1>
+<p>Many plotting packages (e.g. matlab) allow you to produce an encapsulated postscript file (ending in <span>.eps</span>). Then the graphic can be incorporated into a paper with the following command (see the LaTeX  file)</p>
+<p>Note that the <span>caption</span> command gives the figure a number that can be referred to later as Figure <a href="#figlabel" data-reference-type="ref" data-reference="figlabel">[figlabel]</a>.</p>
+<p>The file <span>fig.eps</span> was created in matlab with the commands:</p>
+<pre><code>     &gt;&gt; r = randn(1000,1);
+     &gt;&gt; hist(r)             
+     &gt;&gt; colormap([.7 .7 .7])    % to change the color and make it print better
+     &gt;&gt; print fig.eps</code></pre>
+<h1 id="bibliography-and-citations">Bibliography and citations</h1>
+<p>See a LaTeX  manual such as <span class="citation" data-cites="go-mi-sa:latex"></span> for complete information on the use of a bibliography and citations. The main idea is the use of a bibliographic database such as the one in <span>samplebib.bib</span>, which lists a large set of papers and books, each with a distinct label. Then the <span>cite</span> command references one of the entries in the database by its label. Hence, the citation is included in the paper; the corresponding reference is automatically included in the bibliography of the paper. To do this, you must:</p>
+<ol>
+<li><p>First run <span>latex sample</span></p></li>
+<li><p>Then run <span>bibtex sample</span></p></li>
+<li><p>Then run <span>latex sample</span></p></li>
+<li><p>Then run <span>latex sample</span></p></li>
+</ol>
+<p>The first run of LaTeX  creates a file <span>sample.aux</span> that contains information on the literature references. Running bibtex then creates another file <span>sample.bbl</span>, which is read into the next LaTeX  run producing the list of literature references. Running LaTeX  twice more is needed to read in the citations with proper numbering.</p>
+</body>
+</html>]]></content><author><name>Ernst Roell</name></author><summary type="html"><![CDATA[&lt;!DOCTYPE html&gt; A Simple Example Using LaTeX A Simple Example Using LaTeX R. J. LeVeque and T. P. Chartier Introduction This paper illustrates how various typesetting is accomplished in LaTeX. You are encouraged to view both the source code (sample.tex) and the typeset paper (sample.dvi). First, notice that components of your paper such as sections, subsections, and equations are numbered automatically. Lists Making an itemized list is easy: If the LaTeX  file is called sample.tex then output is created by executing latex sample This creates a file sample.dvi. To view or print, see documentation for your system. Note that leaving one or more blank lines in the input gives the start of a new paragraph. Otherwise blanks do not matter. To force a line to end, use double backslash as in the previous item as seen in sample.tex. Anything after a % is a comment that won’t appear in the output. Mathematical formulas This paper supplies only a taste of how mathematical formulas are created in LaTeX. For more information, see a LaTeX  manual such as . As a short introduction, a few pointers are contained in this section. Dollar signs places LaTeX  into its math mode, which is where mathematical formulas and equations are created. To include an equation in a current line of text, place one dollar sign ($) before and after the equation, for example we might define \(f(x) = 3e^x\). If an equation should be displayed, place two dollar signs ($$) before and after the equation. For example, we might define: \[\sum_{j=1}^N j = \frac{N(N+1)}{2}.\] If the equation should be numbered, use the following notation (see the LaTeX  file): \[e^{i\pi} = \cos(\pi) = -1. \label{cosequation}\] This equation was given a label (which is optional). Hence, the equation can be referred to later as ([cosequation]) rather than hardcoding such numbers into the LaTeX  file. Therefore, adding new equations does not facilitate a need for the programmer to manually renumber the equations. (Note that you will have to run LaTeX  twice on your .tex file for numbering to appear properly. The first run stores the labels in the file sample.aux and the second time run reads these labels at the beginning of processing.) Matrices Matrices can be made using an “array”. Here’s a useful definition that makes it easier to define matrices: (see the LaTeX  source file) Here’s a simple matrix equation using this definition: \[\left[\begin{array}{ccccccccccccc} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right] \left[\begin{array}{ccccccccccccc} x_1\\ x_2 \end{array}\right] = \left[\begin{array}{ccccccccccccc} b_1\\ b_2 \end{array}\right] \label{matrixequation}\] Figures Many plotting packages (e.g. matlab) allow you to produce an encapsulated postscript file (ending in .eps). Then the graphic can be incorporated into a paper with the following command (see the LaTeX  file) Note that the caption command gives the figure a number that can be referred to later as Figure [figlabel]. The file fig.eps was created in matlab with the commands: &gt;&gt; r = randn(1000,1); &gt;&gt; hist(r) &gt;&gt; colormap([.7 .7 .7]) % to change the color and make it print better &gt;&gt; print fig.eps Bibliography and citations See a LaTeX  manual such as for complete information on the use of a bibliography and citations. The main idea is the use of a bibliographic database such as the one in samplebib.bib, which lists a large set of papers and books, each with a distinct label. Then the cite command references one of the entries in the database by its label. Hence, the citation is included in the paper; the corresponding reference is automatically included in the bibliography of the paper. To do this, you must: First run latex sample Then run bibtex sample Then run latex sample Then run latex sample The first run of LaTeX  creates a file sample.aux that contains information on the literature references. Running bibtex then creates another file sample.bbl, which is read into the next LaTeX  run producing the list of literature references. Running LaTeX  twice more is needed to read in the citations with proper numbering.]]></summary></entry><entry><title type="html">Welcome to Jekyll 1</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll 1" /><published>2017-03-01T00:00:00+00:00</published><updated>2017-03-01T00:00:00+00:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Ernst Roell</name></author><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Markdown examples</title><link href="http://localhost:4000/markdown-examples/" rel="alternate" type="text/html" title="Markdown examples" /><published>2017-02-01T00:00:00+00:00</published><updated>2017-02-01T00:00:00+00:00</updated><id>http://localhost:4000/markdown-examples</id><content type="html" xml:base="http://localhost:4000/markdown-examples/"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit.</p>
+
+<h2 id="heading-two-h2">Heading Two (h2)</h2>
+
+<h3 id="heading-three-h3">Heading Three (h3)</h3>
+
+<h4 id="heading-four-h4">Heading Four (h4)</h4>
+
+<h5 id="heading-five-h5">Heading Five (h5)</h5>
+
+<h6 id="heading-six-h6">Heading Six (h6)</h6>
+
+<h2 id="blockquotes">Blockquotes</h2>
+
+<h3 id="single-line">Single line</h3>
+
+<blockquote>
+  <p>My mom always said life was like a box of chocolates. You never know what you’re gonna get.</p>
+</blockquote>
+
+<h3 id="multiline">Multiline</h3>
+
+<blockquote>
+  <p>What do you get when you cross an insomniac, an unwilling agnostic and a dyslexic?</p>
+
+  <p>You get someone who stays up all night torturing himself mentally over the question of whether or not there’s a dog.</p>
+
+  <p>– <em>Hal Incandenza</em></p>
+</blockquote>
+
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+
+<hr />
+
+<h2 id="table">Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title 1</th>
+      <th>Title 2</th>
+      <th>Title 3</th>
+      <th>Title 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First entry</td>
+      <td>Second entry</td>
+      <td>Third entry</td>
+      <td>Fourth entry</td>
+    </tr>
+    <tr>
+      <td>Fifth entry</td>
+      <td>Sixth entry</td>
+      <td>Seventh entry</td>
+      <td>Eight entry</td>
+    </tr>
+    <tr>
+      <td>Ninth entry</td>
+      <td>Tenth entry</td>
+      <td>Eleventh entry</td>
+      <td>Twelfth entry</td>
+    </tr>
+    <tr>
+      <td>Thirteenth entry</td>
+      <td>Fourteenth entry</td>
+      <td>Fifteenth entry</td>
+      <td>Sixteenth entry</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="code">Code</h2>
+
+<p>Source code can be included by fencing the code with three backticks. Syntax highlighting works automatically when specifying the language after the backticks.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```javascript
+function foo () {
+    return "bar";
+}
+```
+</code></pre></div></div>
+
+<p>This would be rendered as:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="dl">"</span><span class="s2">bar</span><span class="dl">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="lists">Lists</h2>
+
+<h3 id="unordered">Unordered</h3>
+
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item
+    <ul>
+      <li>First nested item</li>
+      <li>Second nested item</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ordered">Ordered</h3>
+
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item
+    <ol>
+      <li>First nested item</li>
+      <li>Second nested item</li>
+    </ol>
+  </li>
+</ol>]]></content><author><name>Ernst Roell</name></author><summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit.]]></summary></entry><entry><title type="html">Advanced examples</title><link href="http://localhost:4000/advanced-examples/" rel="alternate" type="text/html" title="Advanced examples" /><published>2017-01-01T00:00:00+00:00</published><updated>2017-01-01T00:00:00+00:00</updated><id>http://localhost:4000/advanced-examples</id><content type="html" xml:base="http://localhost:4000/advanced-examples/"><![CDATA[<p><img src="https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg" alt="Swiss Alps" /></p>
+
+<h2 id="mathjax">MathJax</h2>
+
+<p>You can enable MathJax by setting <code class="language-plaintext highlighter-rouge">mathjax: true</code> on a page or globally in the <code class="language-plaintext highlighter-rouge">_config.yml</code>. Some examples:</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Euler%27s_formula">Euler’s formula</a> relates the  complex exponential function to the trigonometric functions.</p>
+
+\[e^{i\theta}=\cos(\theta)+i\sin(\theta)\]
+
+<p>The <a href="https://en.wikipedia.org/wiki/Lagrangian_mechanics">Euler-Lagrange</a> differential equation is the fundamental equation of calculus of variations.</p>
+
+\[\frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac{\partial L}{\partial \dot{q}} \right ) = \frac{\partial L}{\partial q}\]
+
+<p>The <a href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation">Schrödinger equation</a> describes how the quantum state of a quantum system changes with time.</p>
+
+\[i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t)\]
+
+<h2 id="code">Code</h2>
+
+<p>Embed code by putting <code class="language-plaintext highlighter-rouge">{% highlight language %}</code> <code class="language-plaintext highlighter-rouge">{% endhighlight %}</code> blocks around it. Adding the parameter <code class="language-plaintext highlighter-rouge">linenos</code> will show source lines besides the code.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">void</span> <span class="nf">asyncEnabled</span><span class="p">(</span><span class="n">Dict</span><span class="o">*</span> <span class="n">args</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">vAdmin</span><span class="p">,</span> <span class="n">String</span><span class="o">*</span> <span class="n">txid</span><span class="p">,</span> <span class="k">struct</span> <span class="n">Allocator</span><span class="o">*</span> <span class="n">requestAlloc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span> <span class="n">admin</span> <span class="o">=</span> <span class="n">Identity_check</span><span class="p">((</span><span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span><span class="p">)</span> <span class="n">vAdmin</span><span class="p">);</span>
+    <span class="kt">int64_t</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">admin</span><span class="o">-&gt;</span><span class="n">asyncEnabled</span><span class="p">;</span>
+    <span class="n">Dict</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dict_CONST</span><span class="p">(</span><span class="n">String_CONST</span><span class="p">(</span><span class="s">"asyncEnabled"</span><span class="p">),</span> <span class="n">Int_OBJ</span><span class="p">(</span><span class="n">enabled</span><span class="p">),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">Admin_sendMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span> <span class="n">txid</span><span class="p">,</span> <span class="n">admin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="gists">Gists</h2>
+
+<p>With the <code class="language-plaintext highlighter-rouge">jekyll-gist</code> plugin, which is preinstalled on Github Pages, you can embed gists simply by using the <code class="language-plaintext highlighter-rouge">gist</code> command:</p>
+
+<script src="https://gist.github.com/5555251.js?file=gist.md"></script>
+
+<h2 id="images">Images</h2>
+
+<p>Upload an image to the <em>assets</em> folder and embed it with <code class="language-plaintext highlighter-rouge">![title](/assets/name.jpg))</code>. Keep in mind that the path needs to be adjusted if Jekyll is run inside a subfolder.</p>
+
+<p>A wrapper <code class="language-plaintext highlighter-rouge">div</code> with the class <code class="language-plaintext highlighter-rouge">large</code> can be used to increase the width of an image or iframe.</p>
+
+<p><img src="https://user-images.githubusercontent.com/4943215/55412447-bcdb6c80-5567-11e9-8d12-b1e35fd5e50c.jpg" alt="Flower" /></p>
+
+<p><a href="https://unsplash.com/photos/iGrsa9rL11o">Flower</a> by Tj Holowaychuk</p>
+
+<h2 id="embedded-content">Embedded content</h2>
+
+<p>You can also embed a lot of stuff, for example from YouTube, using the <code class="language-plaintext highlighter-rouge">embed.html</code> include.</p>
+
+<div style="position: relative; margin: 1.5em 0; padding-bottom: 56.25%;">
+  <iframe style="position: absolute;" src="https://www.youtube.com/embed/_C0A5zX-iqM" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+</div>]]></content><author><name>Ernst Roell</name></author><category term="media" /><summary type="html"><![CDATA[]]></summary></entry></feed>
