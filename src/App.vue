@@ -1,9 +1,24 @@
+
+<script setup>
+  import AboutView from "./views/AboutView.vue";
+  import HomeView from "./views/HomeView.vue";
+  import HobbiesView from "./views/HobbiesView.vue";
+  import Research from "./views/Research.vue";
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <!-- <nav>
+    <router-link :to="{ name: 'home' }">Home</router-link> |
+    <router-link :to="{ name: 'about' }">About</router-link> | 
+    <router-link :to="{ name: 'jobs' }">Jobs</router-link> | 
+    <router-link :to="{ name: 'projects' }">Projects</router-link>
   </nav>
-  <router-view/>
+  <router-view/> -->
+  <HomeView></HomeView>
+  <HobbiesView></HobbiesView>
+  <Research></Research>
+
+  
 </template>
 
 <style>
@@ -11,20 +26,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
