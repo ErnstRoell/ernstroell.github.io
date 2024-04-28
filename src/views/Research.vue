@@ -1,12 +1,61 @@
+<script setup>
+// @ is an alias to /src
+import Card from '@/components/Card.vue'
+</script>
+
 <template>
+
   <h2>Research</h2>
-  <div class="research">
-    <div class="bonbons">
+
+  <div class="card-container">
+  <Card>
+    <template v-slot:image>
       <img src="@/assets/research/ect_overview_a.png" alt="">
-    </div>
-    <div class="photos">
+    </template>
+    <template v-slot:title>
+      <h3>Differentiable Euler Characteristic Transforms for Shape
+      Classification</h3>
+    </template>
+    <template v-slot:content>
+      <p>
+        The Euler Characteristic Transform (ECT) has proven to be a powerful
+        representation, combining geometrical and topological characteristics of
+        shapes and graphs. However, the ECT was hitherto unable to learn
+        task-specific representations. We overcome this issue and develop a
+        novel computational layer that enables learning the ECT in an end-to-end
+        fashion. Our method, the Differentiable Euler Characteristic Transform
+        (DECT), is fast and computationally efficient, while exhibiting
+        performance on a par with more complex models in both graph and point
+        cloud classification tasks. Moreover, we show that this seemingly simple
+        statistic provides the same topological expressivity as more complex
+        topological deep learning layers.
+      </p>
+    </template>
+  </Card>
+  <Card>
+    <template v-slot:image>
       <img src="@/assets/research/lorentz.png" alt="">
-    </div>
+    </template>
+    <template v-slot:title>
+      <h3>Normal form for maps with nilpotent linear part</h3>
+    </template>
+    <template v-slot:content>
+      <p> The normal form for an n-dimensional map with irreducible nilpotent
+      linear part is determined using sl2-representation theory. We sketch by
+      example how the reducible case can also be treated in an algorithmic
+      manner. The construction (and proof) of the sl2-triple from the nilpotent
+      linear part is more complicated than one would hope for, but once the
+      abstract sl2 theory is in place, both the description of the normal form
+      and the computational splitting to compute the generator of the coordinate
+      transformation can be handled explicitly in terms of the nilpotent linear
+      part without the explicit knowledge of the triple. Where in the vector field case
+      one runs into invariant theoretical problems when the dimension gets
+      larger if one wants to describe the general form of the normal form, for
+      maps we obtain results without any restrictions on the dimension. In the
+      literature only the 2-dimensional nilpotent case has been described sofar,
+      as far as we know. </p>
+    </template>
+  </Card>
   </div>
 </template>
 
@@ -15,36 +64,14 @@ h2 {
   padding-top: 2em;
   text-align: center;
 }
-img {
-  width: 100%;
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.research {
-  margin-left: auto;
-  margin-right: auto;
-  /* border: 1px solid black; */
-  display: flex;
-  width: 100%;
-  max-width: 1000px;
-  padding-top: 2em;
-  text-align: center;
-  justify-content: center;
-  column-gap: 2em;
-  padding-bottom: 10em;
-}
 
-.bonbons {
-  /* border: 1px solid black; */
-  width: 30%;
-}
-.photos {
-  /* border: 1px solid black; */
-  width: 30%;
-}
-.explore {
-  /* border: 1px solid black; */
-  width: 30%;
-}
 </style>
 
 <script>

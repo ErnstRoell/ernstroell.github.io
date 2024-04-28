@@ -1,6 +1,5 @@
 
 <script setup>
-  import AboutView from "./views/AboutView.vue";
   import HomeView from "./views/HomeView.vue";
   import HobbiesView from "./views/HobbiesView.vue";
   import Research from "./views/Research.vue";
@@ -27,5 +26,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 </style>
