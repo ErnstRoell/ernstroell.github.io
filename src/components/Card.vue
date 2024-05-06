@@ -28,7 +28,8 @@ export default {
   display: flex;
     flex-direction: column;
     justify-content: baseline;
-    width: 425px;
+    min-width: 425px;
+    width: 30%;
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;

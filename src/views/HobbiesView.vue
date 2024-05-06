@@ -63,6 +63,8 @@ h2 {
 }
 
 .card-container {
+    max-width: 1500px;
+    margin:auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

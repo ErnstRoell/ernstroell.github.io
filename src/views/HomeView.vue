@@ -36,9 +36,11 @@
 <style scoped>
 
 .card-container {
+    max-width: 1500px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin:auto;
     margin-top: 100px;
 
 }
