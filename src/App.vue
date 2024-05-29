@@ -15,7 +15,7 @@
   <router-view/> -->
   <HomeView></HomeView>
   <HobbiesView></HobbiesView>
-  <Research></Research>
+  <Research></Research>    
   
   
 </template>

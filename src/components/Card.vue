@@ -8,7 +8,9 @@ export default {
 
 <template>
   <div class="card">
+    <div class="image">
       <slot name="image"></slot>
+    </div>
       <div class="card-content">
         <slot name="title"></slot>
         <slot name="content"></slot>
@@ -24,22 +26,25 @@ export default {
 
 <style scoped> 
 
+/* .card {
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+
+
+} */
+
 .card {
   display: flex;
     flex-direction: column;
     justify-content: baseline;
-    min-width: 425px;
-    width: 30%;
+    /* min-width: 425px;
+    width: 30%; */
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
-    margin: 20px;
-}
-
-.card img {
-    width: auto;
-    height: 200px;
 }
 
 
@@ -70,5 +75,5 @@ export default {
     border-radius: 8px;
     margin-top: 8px;
     color: #f0f0f0;
-}
+} 
 </style>

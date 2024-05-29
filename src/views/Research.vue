@@ -66,9 +66,18 @@ h2 {
 }
 
 .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-content: end;
+    width: 100%;
+    max-width: 1300px;
+    gap: 20px;
+}
+
+.card-container img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 
