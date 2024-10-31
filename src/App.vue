@@ -25,6 +25,8 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  max-width: 1500px;
 }
 
 

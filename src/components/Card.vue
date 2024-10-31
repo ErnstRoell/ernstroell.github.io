@@ -28,7 +28,7 @@ export default {
   display: flex;
     flex-direction: column;
     justify-content: baseline;
-    width: 425px;
+    max-width: 300px;
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;

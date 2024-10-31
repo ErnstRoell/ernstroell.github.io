@@ -63,9 +63,10 @@ h2 {
 }
 
 .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
