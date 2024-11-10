@@ -8,13 +8,7 @@ import Card from '@/components/Card.vue'
   <h2>Interests</h2>
 
   <div class="card-container">
-  <Card>
-    <template v-slot:image>
-      <img src="@/assets/bonbons.png" alt="">
-    </template>
-    <template v-slot:title>
-      <h3>Making Bonbons</h3>
-    </template>
+  <Card image="bonbons.png" title="Bonbons">
     <template v-slot:content>
       <p> 
         Exploring different flavour combinations that speak to the imagination 
@@ -25,13 +19,7 @@ import Card from '@/components/Card.vue'
       </p>
     </template>
   </Card>
-  <Card>
-    <template v-slot:image>
-      <img src="@/assets/sunset.png" alt="">
-    </template>
-    <template v-slot:title>
-      <h3>Photography</h3>
-    </template>
+  <Card image="sunset.png" title="Photography">
     <template v-slot:content>
       <p> Photography drives the photographer to reevaluate the way we look at
       things, finding the unique angles or hidden detail we often overlook. It
@@ -39,13 +27,7 @@ import Card from '@/components/Card.vue'
       seemingly simple objects that is truly exhilarating </p>
     </template>
   </Card>
-  <Card>
-    <template v-slot:image>
-      <img src="@/assets/hiking.jpg" alt="">
-    </template>
-    <template v-slot:title>
-      <h3>Hiking</h3>
-    </template>
+  <Card image="hiking.jpg" title="Hiking">
     <template v-slot:content>
       <p> During the weekends I love to explore the surrounding mountains just south 
         of Munich. The nature is wonderful and lets you revitalize during the weekends. </p>
@@ -63,21 +45,11 @@ h2 {
 }
 
 .card-container {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    justify-content: end;
-    width: 100%;
-    max-width: 1300px;
-    gap: 20px;
+  /* border: 1px solid black; */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
 }
-
-.card-container img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-
 
 </style>
 
