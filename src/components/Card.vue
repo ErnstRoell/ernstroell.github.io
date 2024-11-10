@@ -1,21 +1,24 @@
 
 <script>
 export default {
-  name: 'Card'
+  name: 'Card',
+  props: ['image','title'],
+  methods: {
+      getImgUrl(pic) {
+        return require('../assets/' + pic)
+    }
+  }
 }
 </script>
 
 
 <template>
   <div class="card">
-      <slot name="image"></slot>
-      <div class="card-content">
-        <slot name="title"></slot>
-        <slot name="content"></slot>
-      </div>
-      <div class="thebutton">
-                <a href="#" class="btn">Read More</a>
-          </div>
+    <img :src="getImgUrl(this.image)">
+    <h3>{{ title }}</h3>  
+    <p>  
+      <slot name="content"></slot> 
+    </p>
   </div>
 </template>
 
@@ -26,35 +29,32 @@ export default {
 
 .card {
   display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    max-width: 300px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
-    margin: 20px;
+  flex-direction: column;
+  /* border-radius: 8px; */
+  /* overflow: hidden; */
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
 }
 
 .card img {
-    width: auto;
-    height: 200px;
+    width: 100%;    
+}
+
+.card h3 {
+  color: #962020;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 
-.card-content {
-    padding: 16px;
-}
-
-.card-content h3 {
-    font-size: 28;
-    margin-bottom: 8px;
-}
-
-.card-content p {
-    color: #666;
+.card p {
+    color: #962020;
     font-size: 15px;
     line-height: 1.3;
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .card .thebutton {
@@ -62,12 +62,12 @@ export default {
     padding: 16px;
 }
 
-.thebutton .btn {
+/* .thebutton .btn {
     display: inline-block;
     padding: 8px 16px; 
     background-color: #333;
     border-radius: 8px;
     margin-top: 8px;
     color: #f0f0f0;
-}
+}  */
 </style>
