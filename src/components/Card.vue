@@ -27,15 +27,6 @@ export default {
 
 <style scoped> 
 
-/* .card {
-    text-align: center;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
-
-
-} */
-
 .card {
   display: flex;
   flex-direction: column;
@@ -49,7 +40,7 @@ export default {
 }
 
 .card h3 {
-  color: #962020;
+  /* color: #962020;  */
   font-size: 30px;
   text-align: center;
   margin-left: 15%;
@@ -58,7 +49,7 @@ export default {
 
 
 .card p {
-    color: #962020;
+    /* color: #962020; */
     font-size: 15px;
     line-height: 1.3;
     text-align: justify;
