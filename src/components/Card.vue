@@ -40,7 +40,7 @@ export default {
 }
 
 .card h3 {
-  color: #962020;
+  /* color: #962020;  */
   font-size: 30px;
   text-align: center;
   margin-left: 15%;
@@ -49,7 +49,7 @@ export default {
 
 
 .card p {
-    color: #962020;
+    /* color: #962020; */
     font-size: 15px;
     line-height: 1.3;
     text-align: justify;
