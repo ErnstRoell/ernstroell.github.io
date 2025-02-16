@@ -8,8 +8,8 @@ import Card from '@/components/Card.vue'
   <h2>Research</h2>
 
   <div class="card-container">
-  <Card image="research/ect.png" title="Differentiable Euler Characteristic Transforms for Shape
-      Classification">
+  <Card paper="https://openreview.net/forum?id=MO632iPq3I" github="https://github.com/aidos-lab/dect-evaluation" title="Differentiable Euler Characteristic Transforms for Shape
+      Classification" >
     <template v-slot:content>
         The Euler Characteristic Transform (ECT) has proven to be a powerful
         representation, combining geometrical and topological characteristics of
@@ -24,7 +24,7 @@ import Card from '@/components/Card.vue'
         topological deep learning layers.
     </template>
   </Card>
-  <Card image="research/lorentz.png" title="Normal form for maps with nilpotent linear part">
+  <Card paper="https://royalsocietypublishing.org/doi/10.1098/rspa.2021.0908" title="Normal form for maps with nilpotent linear part">
     <template v-slot:content>
       <p> The normal form for an n-dimensional map with irreducible nilpotent
       linear part is determined using sl2-representation theory. We sketch by
@@ -42,7 +42,7 @@ import Card from '@/components/Card.vue'
       as far as we know. </p>
     </template>
   </Card>
-  <Card image="research/airplane.png" title="Generative Topology for Shape Synthesis">
+  <Card arxiv="https://arxiv.org/abs/2410.18987" title="Generative Topology for Shape Synthesis">
     <template v-slot:content>
       <p>   
         The Euler Characteristic Transform (ECT) is a powerful invariant for
@@ -58,7 +58,7 @@ import Card from '@/components/Card.vue'
     </p>
     </template>
   </Card>
-  <Card image="research/triangulation.png" title="MANTRA: The Manifold Triangulations Assemblage">
+  <Card paper="https://openreview.net/forum?id=X6y5CC44HM" github="https://github.com/aidos-lab/mantra-benchmarks" title="MANTRA: The Manifold Triangulations Assemblage">
     <template v-slot:content>
       <p> 
         The rising interest in leveraging higher-order interactions present in
@@ -82,7 +82,7 @@ import Card from '@/components/Card.vue'
     </template>
   </Card>
 
-  <Card image="research/diffusionmodel.png" title="A Diffusion Model Predicts 3D Shapes from 2D Microscopy Images">
+  <Card title="A Diffusion Model Predicts 3D Shapes from 2D Microscopy Images" paper="https://ieeexplore.ieee.org/document/10230752">
     <template v-slot:content>
         Diffusion models are a special type of generative model, capable of
         synthesising new data from a learnt distribution. We introduce DISPR, a

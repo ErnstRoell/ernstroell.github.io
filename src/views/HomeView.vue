@@ -51,7 +51,8 @@
 
 
 .about-card-image {
-    background-color: rgb(172, 181, 174);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+    background-color: rgb(224,224,224);
     /* border: 2px solid black; */
     display: flex;
     justify-content: center;
@@ -65,7 +66,8 @@
 }
 
 .about-card-text {
-    background-color: rgb(224, 224, 211);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+    background-color: rgb(224, 224, 224);
     align-content: center;
 }
 
