@@ -51,7 +51,7 @@
 
 
 .about-card-image {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
     background-color: rgb(224,224,224);
     /* border: 2px solid black; */
     display: flex;
@@ -66,7 +66,7 @@
 }
 
 .about-card-text {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
     background-color: rgb(224, 224, 224);
     align-content: center;
 }

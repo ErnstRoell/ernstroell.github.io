@@ -53,7 +53,8 @@ export default {
 .card {
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
+  background-color: rgb(224, 224, 224);
 }
 
 .links {

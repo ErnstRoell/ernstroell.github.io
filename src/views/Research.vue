@@ -42,19 +42,19 @@ import Card from '@/components/Card.vue'
       as far as we know. </p>
     </template>
   </Card>
-  <Card arxiv="https://arxiv.org/abs/2410.18987" title="Generative Topology for Shape Synthesis">
+  <Card paper="https://arxiv.org/abs/2410.18987" title="Point Cloud Synthesis Using Inner Product Transforms">
     <template v-slot:content>
       <p>   
-        The Euler Characteristic Transform (ECT) is a powerful invariant for
-        assessing geometrical and topological characteristics of a large variety
-        of objects, including graphs and embedded simplicial complexes. Although
-        the ECT is invertible in theory, no explicit algorithm for general data
-        sets exists. In this paper, we address this lack and demonstrate that it
-        is possible to learn the inversion, permitting us to develop a novel
-        framework for shape generation tasks on point clouds. Our model exhibits
-        high quality in reconstruction and generation tasks, affords efficient
-        latent-space interpolation, and is orders of magnitude faster than
-        existing methods. 
+        Point-cloud synthesis, i.e. the generation of novel point clouds from
+          an input distribution, remains a challenging task, for which numerous
+          complex machine-learning models have been devised. We develop a novel
+          method that encodes geometrical-topological characteristics of point
+          clouds using inner products, leading to a highly-efficient point
+          cloud representation with provable expressivity properties.
+          Integrated into deep learning models, our encoding exhibits high
+          quality in typical tasks like reconstruction, generation, and
+          interpolation, with inference times orders of magnitude faster than
+          existing methods.
     </p>
     </template>
   </Card>
@@ -98,6 +98,29 @@ import Card from '@/components/Card.vue'
         diffusion models can be successfully applied to inverse biomedical
         problems, and that they learn to reconstruct 3D shapes with realistic
         morphological features from 2D microscopy images.
+    </template>
+  </Card>
+
+  <Card paper="https://arxiv.org/abs/2510.00757" 
+      title="LEAP: Local ECT-Based Learnable Positional Encodings for Graphs">
+    <template v-slot:content>
+      <p> 
+           Graph neural networks (GNNs) largely rely on the message-passing
+          paradigm, where nodes iteratively aggregate information from their
+          neighbors. Yet, standard message passing neural networks (MPNNs) face
+          well-documented theoretical and practical limitations. Graph
+          positional encoding (PE) has emerged as a promising direction to
+          address these limitations. The Euler Characteristic Transform (ECT)
+          is an efficiently computable geometric–topological invariant that
+          characterizes shapes and graphs. In this work, we combine the
+          differentiable approximation of the ECT (DECT) and its local variant
+          (ℓ-ECT) to propose LEAP, a new end-to-end trainable local structural
+          PE for graphs. We evaluate our approach on multiple real-world
+          datasets as well as on a synthetic task designed to test its ability
+          to extract topological features. Our results underline the potential
+          of ℓ-ECT-based encodings as a powerful component for graph
+          representation learning pipelines.
+      </p>
     </template>
   </Card>
 
