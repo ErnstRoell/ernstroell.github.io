@@ -16,8 +16,6 @@
   <HomeView></HomeView>
   <HobbiesView></HobbiesView>
   <Research></Research>
-
-  
 </template>
 
 <style>

@@ -29,8 +29,21 @@
             deep learning architectures that are both sparser and more
             expressive. We hope to apply this to expand and combine on the work
             done and apply results to biomedical data.
-
         </p>
+        <div class="socials">
+            <a href="https://github.com/ErnstRoell">
+            <img src="@/assets/github-icon.svg" /> 
+            </a>
+            <a href="https://scholar.google.com/citations?user=AKghH_sAAAAJ&hl=en">
+            <img src="@/assets/google-scholar-icon.svg"/> 
+            </a>
+            <a href="cv.pdf">
+            <img src="@/assets/cv-icon.svg"/> 
+            </a>
+            <a href="https://www.linkedin.com/in/ernstroell/">
+            <img src="@/assets/linkedin-icon.svg"/> 
+            </a>
+        </div>
     </div>
 </div>
 </div>
@@ -39,6 +52,18 @@
 
 <style scoped>
 
+.socials {
+    width: 100%;
+    /*border: 2px solid black; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+
+.socials img {
+    width: 2em;
+}
 
 .about-card-container {
     /* border: 2px solid black; */
@@ -46,7 +71,6 @@
     gap:20px;
     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
     margin-top: 100px;
-
 }
 
 
@@ -83,6 +107,8 @@
 
 
 </style>
+
+
 <script>
 
 export default {
