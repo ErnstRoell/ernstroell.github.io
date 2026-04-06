@@ -68,7 +68,7 @@
 .about-card-container {
     /* border: 2px solid black; */
     display: grid;
-    gap:20px;
+    gap: 1.5em; 
     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
     margin-top: 100px;
 }

@@ -48,10 +48,9 @@ export default {
   grid-row: span 3;
   border-radius: 16px;
   padding: 0px 0px 20px 0px; 
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, .6);
   background-color: rgb(224, 224, 224);
 }
-
 
 .links {
   margin-top: auto;

@@ -127,12 +127,13 @@ import Card from '@/components/Card.vue'
 .custom-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
-  gap: 10px;
+  gap: 1.5em; 
 }
 
 h2 {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: .5em;
+  font-size: 3rem;
+  padding-bottom: .5em;
   text-align: center;
 }
 

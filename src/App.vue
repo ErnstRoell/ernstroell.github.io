@@ -22,14 +22,23 @@
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.main-content {
-  width: 1400px; 
-  margin: auto;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .main-content {
+    width: 1400px; 
+    margin: auto;
+  }
+  body {
+    background-image: url('@/assets/test.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
 
 </style>
