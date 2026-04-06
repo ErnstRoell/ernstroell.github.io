@@ -40,23 +40,16 @@ import Card from '@/components/Card.vue'
 <style scoped>
 
 h2 {
+  border: 1px solid black;
   padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
-}
-
-.card-container {
-  /* border: 1px solid black; */
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
 }
 
 </style>
 
 
 <script>
-
-
 
 export default {
   name: 'HobbiesView',

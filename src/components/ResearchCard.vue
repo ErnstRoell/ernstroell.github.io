@@ -29,22 +29,10 @@ export default {
 
 <style scoped> 
 
-.item{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  padding: 1em;
-  background-color: red;
-  text-align: center;
-  border-radius: 8px;
-  font-size:2rem;
-  
-}
-
 .card {
   display: grid; 
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: 1 / 3;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
   background-color: rgb(224, 224, 224);
   border: 1px solid blue;

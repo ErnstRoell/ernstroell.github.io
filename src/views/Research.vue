@@ -7,7 +7,7 @@ import Card from '@/components/Card.vue'
 
   <h2>Research</h2>
 
-  <div class="card-container">
+  <div class="custom-card-container">
   <Card paper="https://openreview.net/forum?id=MO632iPq3I" github="https://github.com/aidos-lab/dect-evaluation" title="Differentiable Euler Characteristic Transforms for Shape
       Classification" >
     <template v-slot:content>
@@ -124,22 +124,33 @@ import Card from '@/components/Card.vue'
     </template>
   </Card>
 
-
   </div>
 </template>
 
-<style scoped> 
+<style> 
+
+.grid-container {
+  display: grid;
+  background-color: blue;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.custom-card-container {
+  display: grid;
+  background-color: blue;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
 h2 {
+  border: 1px solid black;
   padding-top: 2em;
+  padding-bottom: 2em;
   text-align: center;
 }
 
-.card-container {
-  /* border: 1px solid black; */
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
-}
+
 
 </style>
 

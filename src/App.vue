@@ -1,8 +1,9 @@
-
 <script setup>
   import HomeView from "./views/HomeView.vue";
   import HobbiesView from "./views/HobbiesView.vue";
   import Research from "./views/Research.vue";
+  import Containers from "./views/Containers.vue";
+  import ResearchCard from '@/components/ResearchCard.vue'
 </script>
 
 <template>
@@ -14,8 +15,12 @@
   </nav>
   <router-view/> -->
   <HomeView></HomeView>
-  <HobbiesView></HobbiesView>
-  <Research></Research>
+
+  <div class="main-content">
+    <HobbiesView></HobbiesView>
+    <Research></Research>
+    <Containers></Containers>
+  </div>
 </template>
 
 <style>
@@ -23,9 +28,10 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: auto;
-  max-width: 1500px;
 }
-
+.main-content {
+  width: 1000px; 
+  margin: auto;
+}
 
 </style>
