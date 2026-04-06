@@ -3,7 +3,6 @@
   import HobbiesView from "./views/HobbiesView.vue";
   import Research from "./views/Research.vue";
   import Containers from "./views/Containers.vue";
-  import ResearchCard from '@/components/ResearchCard.vue'
 </script>
 
 <template>
@@ -14,12 +13,11 @@
     <router-link :to="{ name: 'projects' }">Projects</router-link>
   </nav>
   <router-view/> -->
-  <HomeView></HomeView>
 
   <div class="main-content">
+    <HomeView></HomeView>
     <HobbiesView></HobbiesView>
     <Research></Research>
-    <Containers></Containers>
   </div>
 </template>
 
@@ -30,7 +28,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .main-content {
-  width: 1000px; 
+  width: 1400px; 
   margin: auto;
 }
 

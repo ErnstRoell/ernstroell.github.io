@@ -14,10 +14,11 @@ export default {
 
 <template>
   <div class="card">
+    <img :src="getImgUrl(this.image)" v-if="this.image"/> 
     <h3>{{ title }}</h3>  
-    <p>  
+    <div class="card-body">
       <slot name="content"></slot> 
-    </p>
+    </div>
     <div class="links" v-show="this.arxiv !== nill || this.paper !== nill || this.github !== nill">
       <a :href="this.arxiv" v-if="this.arxiv" class="button">Arxiv</a>
       <a :href="this.paper" v-if="this.paper" class="button">Paper</a>
@@ -32,7 +33,7 @@ export default {
 .item{
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 3;
+  grid-row: span 4;
   padding: 1em;
   background-color: red;
   text-align: center;
@@ -45,9 +46,10 @@ export default {
   display: grid; 
   grid-template-rows: subgrid;
   grid-row: span 3;
+  border-radius: 16px;
+  padding: 0px 0px 20px 0px; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, .4);
   background-color: rgb(224, 224, 224);
-  border: 1px solid blue;
 }
 
 
@@ -55,6 +57,7 @@ export default {
   margin-top: auto;
   display: flex; 
   justify-content: center;
+  align-content: center;
   gap: 1em;
   padding: 1em;
 }
@@ -62,20 +65,23 @@ export default {
 
 .card img {
     width: 100%;    
+    border-radius: 16px 16px 0px 0px; 
 }
 
 .card h3 {
-  border: 1px solid black;
+  margin-left: 2em;
+  margin-right: 2em;
   font-size: 20px;
   text-align: center;
 }
 
 
-.card p {
-    border: 1px solid black;
-    font-size: 15px;
-    line-height: 1.5;
-    text-align: justify;
+.card-body {
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: justify;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .button {

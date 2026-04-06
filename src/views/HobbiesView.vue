@@ -10,27 +10,25 @@ import Card from '@/components/Card.vue'
   <div class="card-container">
   <Card image="bonbons.png" title="Bonbons">
     <template v-slot:content>
-      <p> 
         Exploring different flavour combinations that speak to the imagination 
         and invoke conversation is a passion of mine. 
         Chocolate does not only works amazingly well with a large variety spices, such as nutmeg,
         pepper, paprika and kardamom, but also with herbs and aromatics such as 
         rozemary, lemongrass and rozes. 
-      </p>
     </template>
   </Card>
   <Card image="sunset.png" title="Photography">
     <template v-slot:content>
-      <p> Photography drives the photographer to reevaluate the way we look at
+      Photography drives the photographer to reevaluate the way we look at
       things, finding the unique angles or hidden detail we often overlook. It
       is this sort of cat and mouse game and the sheer depth one can find in
-      seemingly simple objects that is truly exhilarating </p>
+      seemingly simple objects that is truly exhilarating.
     </template>
   </Card>
   <Card image="hiking.jpg" title="Hiking">
     <template v-slot:content>
-      <p> During the weekends I love to explore the surrounding mountains just south 
-        of Munich. The nature is wonderful and lets you revitalize during the weekends. </p>
+      During the weekends I love to explore the surrounding mountains just south 
+      of Munich. The nature is wonderful and lets you revitalize during the weekends.
     </template>
   </Card>
   </div>
@@ -39,8 +37,15 @@ import Card from '@/components/Card.vue'
 
 <style scoped>
 
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+  gap: 10px;
+}
+
+
+
 h2 {
-  border: 1px solid black;
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;

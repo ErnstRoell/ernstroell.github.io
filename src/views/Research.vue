@@ -26,7 +26,7 @@ import Card from '@/components/Card.vue'
   </Card>
   <Card paper="https://royalsocietypublishing.org/doi/10.1098/rspa.2021.0908" title="Normal form for maps with nilpotent linear part">
     <template v-slot:content>
-      <p> The normal form for an n-dimensional map with irreducible nilpotent
+      The normal form for an n-dimensional map with irreducible nilpotent
       linear part is determined using sl2-representation theory. We sketch by
       example how the reducible case can also be treated in an algorithmic
       manner. The construction (and proof) of the sl2-triple from the nilpotent
@@ -39,46 +39,43 @@ import Card from '@/components/Card.vue'
       larger if one wants to describe the general form of the normal form, for
       maps we obtain results without any restrictions on the dimension. In the
       literature only the 2-dimensional nilpotent case has been described sofar,
-      as far as we know. </p>
+      as far as we know.
     </template>
   </Card>
   <Card paper="https://arxiv.org/abs/2410.18987" title="Point Cloud Synthesis Using Inner Product Transforms">
     <template v-slot:content>
-      <p>   
-        Point-cloud synthesis, i.e. the generation of novel point clouds from
-          an input distribution, remains a challenging task, for which numerous
-          complex machine-learning models have been devised. We develop a novel
-          method that encodes geometrical-topological characteristics of point
-          clouds using inner products, leading to a highly-efficient point
-          cloud representation with provable expressivity properties.
-          Integrated into deep learning models, our encoding exhibits high
-          quality in typical tasks like reconstruction, generation, and
-          interpolation, with inference times orders of magnitude faster than
-          existing methods.
-    </p>
+        Point-cloud synthesis, i.e. the generation of novel point clouds
+        from an input distribution, remains a challenging task, for which
+        numerous complex machine-learning models have been devised. We
+        develop a novel method that encodes geometrical-topological
+        characteristics of point clouds using inner products, leading to a
+        highly-efficient point cloud representation with provable
+        expressivity properties. Integrated into deep learning models, our
+        encoding exhibits high quality in typical tasks like
+        reconstruction, generation, and interpolation, with inference times
+        orders of magnitude faster than existing methods.
     </template>
   </Card>
   <Card paper="https://openreview.net/forum?id=X6y5CC44HM" github="https://github.com/aidos-lab/mantra-benchmarks" title="MANTRA: The Manifold Triangulations Assemblage">
     <template v-slot:content>
-      <p> 
-        The rising interest in leveraging higher-order interactions present in
-        complex systems has led to a surge in more expressive models exploiting
-        high-order structures in the data, especially in topological deep
-        learning (TDL), which designs neural networks on high-order domains such
-        as simplicial complexes. However, progress in this field is hindered by
-        the scarcity of datasets for benchmarking these architectures. To
-        address this gap, we introduce MANTRA, the first large-scale, diverse,
-        and intrinsically high order dataset for benchmarking high-order models,
-        comprising over 43,000 and 249,000 triangulations of surfaces and
-        three-dimensional manifolds, respectively. With MANTRA, we assess
-        several graph- and simplicial complex-based models on three topological
-        classification tasks. We demonstrate that while simplicial complex-based
-        neural networks generally outperform their graph-based counterparts in
-        capturing simple topological invariants, they also struggle, suggesting
-        a rethink of TDL. Thus, MANTRA serves as a benchmark for assessing and
-        advancing topological methods, leading the way for more effective
-        high-order models.
-      </p>
+        The rising interest in leveraging higher-order interactions present
+        in complex systems has led to a surge in more expressive models
+        exploiting high-order structures in the data, especially in
+        topological deep learning (TDL), which designs neural networks on
+        high-order domains such as simplicial complexes. However, progress
+        in this field is hindered by the scarcity of datasets for
+        benchmarking these architectures. To address this gap, we introduce
+        MANTRA, the first large-scale, diverse, and intrinsically high
+        order dataset for benchmarking high-order models, comprising over
+        43,000 and 249,000 triangulations of surfaces and three-dimensional
+        manifolds, respectively. With MANTRA, we assess several graph- and
+        simplicial complex-based models on three topological classification
+        tasks. We demonstrate that while simplicial complex-based neural
+        networks generally outperform their graph-based counterparts in
+        capturing simple topological invariants, they also struggle,
+        suggesting a rethink of TDL. Thus, MANTRA serves as a benchmark for
+        assessing and advancing topological methods, leading the way for
+        more effective high-order models.
     </template>
   </Card>
 
@@ -104,23 +101,21 @@ import Card from '@/components/Card.vue'
   <Card paper="https://arxiv.org/abs/2510.00757" 
       title="LEAP: Local ECT-Based Learnable Positional Encodings for Graphs">
     <template v-slot:content>
-      <p> 
-           Graph neural networks (GNNs) largely rely on the message-passing
-          paradigm, where nodes iteratively aggregate information from their
-          neighbors. Yet, standard message passing neural networks (MPNNs) face
-          well-documented theoretical and practical limitations. Graph
-          positional encoding (PE) has emerged as a promising direction to
-          address these limitations. The Euler Characteristic Transform (ECT)
-          is an efficiently computable geometric–topological invariant that
-          characterizes shapes and graphs. In this work, we combine the
-          differentiable approximation of the ECT (DECT) and its local variant
-          (ℓ-ECT) to propose LEAP, a new end-to-end trainable local structural
-          PE for graphs. We evaluate our approach on multiple real-world
-          datasets as well as on a synthetic task designed to test its ability
-          to extract topological features. Our results underline the potential
-          of ℓ-ECT-based encodings as a powerful component for graph
-          representation learning pipelines.
-      </p>
+        Graph neural networks (GNNs) largely rely on the message-passing
+        paradigm, where nodes iteratively aggregate information from their
+        neighbors. Yet, standard message passing neural networks (MPNNs)
+        face well-documented theoretical and practical limitations. Graph
+        positional encoding (PE) has emerged as a promising direction to
+        address these limitations. The Euler Characteristic Transform (ECT)
+        is an efficiently computable geometric–topological invariant that
+        characterizes shapes and graphs. In this work, we combine the
+        differentiable approximation of the ECT (DECT) and its local
+        variant (ℓ-ECT) to propose LEAP, a new end-to-end trainable local
+        structural PE for graphs. We evaluate our approach on multiple
+        real-world datasets as well as on a synthetic task designed to test
+        its ability to extract topological features. Our results underline
+        the potential of ℓ-ECT-based encodings as a powerful component for
+        graph representation learning pipelines.
     </template>
   </Card>
 
@@ -129,22 +124,13 @@ import Card from '@/components/Card.vue'
 
 <style> 
 
-.grid-container {
-  display: grid;
-  background-color: blue;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-}
-
 .custom-card-container {
   display: grid;
-  background-color: blue;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
   gap: 10px;
 }
 
 h2 {
-  border: 1px solid black;
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;
