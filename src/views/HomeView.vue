@@ -76,51 +76,41 @@ const socials = [
   padding-bottom: clamp(32px, 5vw, 56px);
 }
 
-/* Reading copy on the spine, portrait out at the right edge of .wide — the
-   same left/right pairing as .section-head. The text column is capped at
-   reading measure by the first track, not by centring a narrower box. */
-/* The portrait track is sized, not flexible: a 1fr second track would let the
-   copy hold its full 720px measure and shrink the photo to a thumbnail at
-   ~1000px. The text column takes the slack instead, and stays capped at
-   reading measure by .about-text. */
+/* Bio at reading measure on the left, portrait in the right column. Both
+   tracks have a fixed max so the pair stays left-aligned on the page spine
+   rather than spreading to the container edges, and the text track shrinks
+   before the portrait does. */
 .about {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
-  column-gap: clamp(32px, 5vw, 72px);
+  grid-template-columns: minmax(0, var(--prose)) minmax(0, 260px);
+  column-gap: clamp(32px, 4vw, 64px);
   align-items: start;
 }
 
-.about-text {
-  grid-column: 1;
-  grid-row: 1;
-  max-width: var(--prose);
-}
+.about-text { grid-column: 1; grid-row: 1; }
 .about-text > * + * { margin-top: 22px; }
 
 .portrait {
   grid-column: 2;
   grid-row: 1;
-  justify-self: end;
   display: block;
   width: 100%;
-  max-width: 260px;
   height: auto;
 }
 
-/* Below the point where 720px of copy plus the portrait stop fitting, stack:
-   portrait first, as it was before, then the bio. */
-@media (max-width: 820px) {
+p { max-width: 68ch; }
+
+/* One column below the point where the portrait would squeeze the measure;
+   source order puts it above the bio, as it was before. */
+@media (max-width: 880px) {
   .about { grid-template-columns: minmax(0, 1fr); }
-  .about-text { grid-column: 1; grid-row: 2; }
+  .about-text,
+  .portrait { grid-column: 1; grid-row: auto; }
   .portrait {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: start;
+    max-width: 260px;
     margin-bottom: 40px;
   }
 }
-
-p { max-width: 68ch; }
 
 .socials {
   display: flex;
