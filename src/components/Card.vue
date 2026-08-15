@@ -19,7 +19,7 @@ export default {
     <div class="card-body">
       <slot name="content"></slot> 
     </div>
-    <div class="links" v-show="this.arxiv !== nill || this.paper !== nill || this.github !== nill">
+    <div class="links" v-show="arxiv || paper || github">
       <a :href="this.arxiv" v-if="this.arxiv" class="button">Arxiv</a>
       <a :href="this.paper" v-if="this.paper" class="button">Paper</a>
       <a :href="this.github" v-if="this.github" class="button">Github</a>
@@ -28,19 +28,7 @@ export default {
 </template>
 
 
-<style scoped> 
-
-.item{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 4;
-  padding: 1em;
-  background-color: red;
-  text-align: center;
-  border-radius: 8px;
-  font-size:2rem;
-  
-}
+<style scoped>
 
 .card {
   display: grid; 
