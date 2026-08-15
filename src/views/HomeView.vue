@@ -21,9 +21,13 @@ const socials = [
       <h1>Ernst <i>Röell</i></h1>
     </div>
 
-    <div class="prose about">
+    <!-- .wide rather than .prose: the bio needs the full spine width to hold a
+         column of reading copy and the portrait beside it. .about-text caps
+         itself at reading measure, so the left edge is unchanged. -->
+    <div class="wide about">
       <img class="portrait" :src="portrait" alt="Ernst Röell">
 
+      <div class="about-text">
       <p>
         In Algebraic Topology, persistent homology is a methodology to compute the
         homology groups of a simplicial complexes endowed with a filtration. The
@@ -61,24 +65,59 @@ const socials = [
           {{ s.label }}
         </a>
       </nav>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
 .intro {
-  padding-top: clamp(24px, 6vw, 72px);
+  padding-top: clamp(56px, 9vw, 120px);
   padding-bottom: clamp(32px, 5vw, 56px);
 }
 
-.about > * + * { margin-top: 22px; }
+/* Reading copy on the spine, portrait out at the right edge of .wide — the
+   same left/right pairing as .section-head. The text column is capped at
+   reading measure by the first track, not by centring a narrower box. */
+/* The portrait track is sized, not flexible: a 1fr second track would let the
+   copy hold its full 720px measure and shrink the photo to a thumbnail at
+   ~1000px. The text column takes the slack instead, and stays capped at
+   reading measure by .about-text. */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+  column-gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+
+.about-text {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: var(--prose);
+}
+.about-text > * + * { margin-top: 22px; }
 
 .portrait {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
   display: block;
   width: 100%;
   max-width: 260px;
   height: auto;
-  margin-bottom: 40px;
+}
+
+/* Below the point where 720px of copy plus the portrait stop fitting, stack:
+   portrait first, as it was before, then the bio. */
+@media (max-width: 820px) {
+  .about { grid-template-columns: minmax(0, 1fr); }
+  .about-text { grid-column: 1; grid-row: 2; }
+  .portrait {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-bottom: 40px;
+  }
 }
 
 p { max-width: 68ch; }
