@@ -119,7 +119,23 @@
   h3 { font-size: clamp(22px, 2.2vw, 26px); line-height: 1.2; }
   h1 i, h2 i, h3 i { font-style: italic; color: var(--accent); }
 
-  p { margin: 0; }
+  /* Running text is justified to both edges. Hyphenation is not optional here:
+     justifying without it forces the browser to make up the difference in
+     word spacing alone, which opens vertical rivers of whitespace — worst in
+     the narrow interest columns and on phones. `hyphens: auto` needs the lang
+     attribute on <html>, which public/index.html sets. */
+  p {
+    margin: 0;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* Mono labels are short, uppercase and letter-spaced; justifying them would
+     stretch a one-line label across the whole column. */
+  p.mono {
+    text-align: left;
+    hyphens: manual;
+  }
 
   a { color: inherit; text-decoration: none; }
 

@@ -40,6 +40,8 @@ All tokens live in `src/App.vue`'s unscoped `<style>`:
 
 Three faces, loaded from Google Fonts in `public/index.html`: Instrument Serif (display), IBM Plex Sans 300/400/500 (body), IBM Plex Mono 400/500 (labels, metadata, nav — the `.mono` utility).
 
+Running text (`p`) is justified to both edges, and `hyphens: auto` goes with it — **keep them together.** Justifying without hyphenation leaves word spacing as the only way to reach the right margin, which opens vertical rivers of whitespace, worst in the narrow interest columns and on phones. Hyphenation depends on `lang="en"` on `<html>`, set in `public/index.html`; remove that attribute and hyphenation silently stops. `p.mono` is exempt, since justifying a one-line uppercase label stretches it across the whole column.
+
 ### Layout
 
 Two containers, both `max-width` capped and sharing **one left edge** — this spine is the main structural idea, so don't centre a narrower box inside it:
