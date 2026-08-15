@@ -21,51 +21,50 @@ const socials = [
       <h1>Ernst <i>Röell</i></h1>
     </div>
 
-    <!-- .wide, not .prose: the two-column grid needs the full container width,
-         and the text column caps itself at reading measure so the left spine
-         still lines up with the name and the section headings. The portrait
-         comes first in source order so it sits on top once the grid stacks. -->
+    <!-- .wide rather than .prose: the bio needs the full spine width to hold a
+         column of reading copy and the portrait beside it. .about-text caps
+         itself at reading measure, so the left edge is unchanged. -->
     <div class="wide about">
       <img class="portrait" :src="portrait" alt="Ernst Röell">
 
       <div class="about-text">
-        <p>
-          In Algebraic Topology, persistent homology is a methodology to compute the
-          homology groups of a simplicial complexes endowed with a filtration. The
-          simplicial complex is usually constructed from a topological space and
-          homology groups persisting over a large range of the filtration can be
-          interpreted as meaningful features of the underlying topological space.
-        </p>
-        <p>
-          Datasets often have interesting structure, but due to high dimensionality
-          and the discrete nature this structure is difficult to quantify. Through the
-          construction of a Vietoris-Rips complex and a computation of the persistent
-          homology one is able to make qualitative statements on the structure, or
-          loosly speaking shape, of the underlying topological space from which the
-          original dataset was sampled. The resulting so-called persistence diagram can
-          be interpreted as the number of connected components, loops and voids in the
-          dataset at various scales, providing valuable information to practitioners.
-        </p>
-        <p>
-          We aim to study how the topological information of datasets can be exploited
-          to create deep learning architectures that are both sparser and more
-          expressive. We hope to apply this to expand and combine on the work done and
-          apply results to biomedical data.
-        </p>
+      <p>
+        In Algebraic Topology, persistent homology is a methodology to compute the
+        homology groups of a simplicial complexes endowed with a filtration. The
+        simplicial complex is usually constructed from a topological space and
+        homology groups persisting over a large range of the filtration can be
+        interpreted as meaningful features of the underlying topological space.
+      </p>
+      <p>
+        Datasets often have interesting structure, but due to high dimensionality
+        and the discrete nature this structure is difficult to quantify. Through the
+        construction of a Vietoris-Rips complex and a computation of the persistent
+        homology one is able to make qualitative statements on the structure, or
+        loosly speaking shape, of the underlying topological space from which the
+        original dataset was sampled. The resulting so-called persistence diagram can
+        be interpreted as the number of connected components, loops and voids in the
+        dataset at various scales, providing valuable information to practitioners.
+      </p>
+      <p>
+        We aim to study how the topological information of datasets can be exploited
+        to create deep learning architectures that are both sparser and more
+        expressive. We hope to apply this to expand and combine on the work done and
+        apply results to biomedical data.
+      </p>
 
-        <nav class="socials">
-          <a
-            v-for="s in socials"
-            :key="s.label"
-            :href="s.href"
-            class="mono social"
-            :target="s.href.startsWith('http') ? '_blank' : null"
-            rel="noopener"
-          >
-            <img :src="s.icon" alt="" aria-hidden="true">
-            {{ s.label }}
-          </a>
-        </nav>
+      <nav class="socials">
+        <a
+          v-for="s in socials"
+          :key="s.label"
+          :href="s.href"
+          class="mono social"
+          :target="s.href.startsWith('http') ? '_blank' : null"
+          rel="noopener"
+        >
+          <img :src="s.icon" alt="" aria-hidden="true">
+          {{ s.label }}
+        </a>
+      </nav>
       </div>
     </div>
   </section>
@@ -73,7 +72,7 @@ const socials = [
 
 <style scoped>
 .intro {
-  padding-top: clamp(24px, 6vw, 72px);
+  padding-top: clamp(56px, 9vw, 120px);
   padding-bottom: clamp(32px, 5vw, 56px);
 }
 
